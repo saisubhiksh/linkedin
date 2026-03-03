@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Angajala Sai Subhiksh – AI Researcher and M.Tech Research Scholar specializing in Explainable AI, Financial Risk Intelligence, Federated Learning, and Quantum Machine Learning.">
+<meta name="keywords" content="Angajala Sai Subhiksh, AI Researcher, Explainable AI, Federated Learning, Quantum Machine Learning, MITS, M.Tech CSE">
+<meta name="author" content="Angajala Sai Subhiksh">
+<title>Angajala Sai Subhiksh | AI Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2e45;
+    --navy-light: #2a4a6b;
+    --accent: #2563a8;
+    --accent-soft: #3b7dd8;
+    --gray-dark: #3d4752;
+    --gray-mid: #6b7280;
+    --gray-light: #9ca3af;
+    --border: #e2e6ea;
+    --bg: #fafbfc;
+    --bg-alt: #f3f5f7;
+    --white: #ffffff;
+    --text: #1a2030;
+    --text-muted: #5a6472;
+    --serif: 'Crimson Pro', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --radius: 4px;
+    --shadow: 0 1px 4px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,251,252,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .nav-brand {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.75rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 5rem 2rem 4.5rem;
+  }
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .hero-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
+  }
+  .hero-tagline {
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    line-height: 1.8;
+  }
+  .hero-tagline span {
+    display: inline-block;
+    margin: 0 0.25rem;
+  }
+  .hero-tagline span::after {
+    content: " ·";
+    color: rgba(255,255,255,0.25);
+  }
+  .hero-tagline span:last-child::after { content: ""; }
+  .hero-vision {
+    font-family: var(--serif);
+    font-size: 1.18rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,0.72);
+    max-width: 680px;
+    line-height: 1.7;
+    margin-bottom: 2.4rem;
+    border-left: 2px solid rgba(255,255,255,0.2);
+    padding-left: 1.2rem;
+  }
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 1.2rem;
+    border-radius: var(--radius);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary {
+    background: var(--white);
+    color: var(--navy);
+  }
+  .btn-primary:hover { background: #e8eef5; }
+  .btn-outline {
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.28);
+  }
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  /* STATS BAR */
+  .stats-bar {
+    background: var(--navy-mid);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 0;
+  }
+  .stats-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+  }
+  .stat-item {
+    flex: 1;
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.07);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-top: 0.3rem;
+    display: block;
+  }
+
+  /* SECTIONS */
+  section { padding: 4.5rem 2rem; }
+  section:nth-child(even) { background: var(--bg-alt); }
+  .section-inner { max-width: 900px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.2;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 3rem;
+    align-items: start;
+  }
+  .about-text p {
+    margin-bottom: 1rem;
+    font-size: 0.97rem;
+    color: var(--gray-dark);
+    line-height: 1.75;
+  }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-sidebar {}
+  .info-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .info-card h4 {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    margin-bottom: 0.75rem;
+  }
+  .info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.86rem;
+    color: var(--gray-dark);
+  }
+  .info-row:last-child { margin-bottom: 0; }
+  .info-icon { color: var(--accent); flex-shrink: 0; margin-top: 0.1rem; }
+
+  /* RESEARCH INTERESTS */
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 0.85rem;
+  }
+  .interest-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .interest-card:hover {
+    border-color: var(--accent-soft);
+    box-shadow: var(--shadow-md);
+  }
+  .interest-icon {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .interest-card h3 {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.35;
+  }
+  .interest-card p {
+    font-size: 0.78rem;
+    color: var(--gray-mid);
+    margin-top: 0.3rem;
+    line-height: 1.5;
+  }
+
+  /* PUBLICATIONS */
+  .pub-section { margin-bottom: 2.75rem; }
+  .pub-section-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pub-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--bg-alt);
+  }
+  .pub-item:last-child { border-bottom: none; }
+  .pub-num {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    color: var(--gray-light);
+    flex-shrink: 0;
+    width: 24px;
+    padding-top: 0.1rem;
+    font-style: italic;
+  }
+  .pub-content {}
+  .pub-title {
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.45;
+    margin-bottom: 0.3rem;
+  }
+  .pub-venue {
+    font-size: 0.82rem;
+    color: var(--gray-mid);
+    font-style: italic;
+    margin-bottom: 0.35rem;
+  }
+  .pub-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 2px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .badge-green { background: #e8f5e9; color: #2e7d32; }
+  .badge-blue  { background: #e3f0fb; color: var(--accent); }
+  .pub-year {
+    font-size: 0.78rem;
+    color: var(--gray-light);
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.2rem;
+  }
+  .project-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.5rem;
+    transition: box-shadow 0.2s;
+  }
+  .project-card:hover { box-shadow: var(--shadow-md); }
+  .project-tag {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.55rem;
+  }
+  .project-card h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.35;
+    margin-bottom: 0.9rem;
+  }
+  .project-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .project-card li {
+    font-size: 0.82rem;
+    color: var(--gray-dark);
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.5;
+    border-bottom: 1px solid var(--bg-alt);
+  }
+  .project-card li:last-child { border-bottom: none; }
+  .project-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.75rem;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+  .skill-category {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.4rem;
+  }
+  .skill-category h3 {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-tag {
+    display: inline-block;
+    background: var(--bg-alt);
+    color: var(--gray-dark);
+    border-radius: 2px;
+    font-size: 0.78rem;
+    padding: 0.22rem 0.6rem;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    border: 1px solid var(--border);
+  }
+
+  /* CERTIFICATIONS */
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.85rem;
+  }
+  .cert-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    transition: border-color 0.2s;
+  }
+  .cert-card:hover { border-color: var(--accent-soft); }
+  .cert-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-alt);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+  .cert-info h4 {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.35;
+    margin-bottom: 0.2rem;
+  }
+  .cert-info p {
+    font-size: 0.75rem;
+    color: var(--gray-mid);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    padding: 0 0 2rem 1.2rem;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-dot {
+    position: absolute;
+    left: -1.35rem;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--accent);
+  }
+  .timeline-year {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+  .timeline-title {
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.2rem;
+  }
+  .timeline-desc {
+    font-size: 0.84rem;
+    color: var(--gray-mid);
+    line-height: 1.55;
+  }
+
+  /* TEACHING */
+  .teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .teaching-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.4rem;
+  }
+  .teaching-card h3 {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.65rem;
+  }
+  .teaching-card p {
+    font-size: 0.82rem;
+    color: var(--gray-mid);
+    line-height: 1.6;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--navy);
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .contact-section .section-label { color: rgba(255,255,255,0.4); }
+  .contact-section .section-title {
+    color: var(--white);
+    border-color: rgba(255,255,255,0.12);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 2rem;
+  }
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: var(--radius);
+    font-size: 0.86rem;
+    font-weight: 500;
+    text-decoration: none;
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.14);
+    transition: all 0.2s;
+  }
+  .contact-link:hover {
+    background: rgba(255,255,255,0.13);
+    border-color: rgba(255,255,255,0.3);
+  }
+  .contact-p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 0.75rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #080f18;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+    padding: 1.4rem 1rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .stats-inner { flex-wrap: wrap; }
+    .stat-item { flex: 1 1 45%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .hero h1 { font-size: 2rem; }
+    section { padding: 3rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">A. Sai Subhiksh</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-label">M.Tech Research Scholar · MITS, Andhra Pradesh</div>
+    <h1>Angajala Sai Subhiksh</h1>
+    <div class="hero-tagline">
+      <span>Artificial Intelligence</span>
+      <span>Explainable AI</span>
+      <span>Financial & Risk Intelligence</span>
+      <span>Cloud & Federated Learning</span>
+      <span>Quantum Machine Learning</span>
+    </div>
+    <p class="hero-vision">
+      Advancing trustworthy, interpretable AI systems that bridge theoretical rigor with real-world impact—
+      from financial risk forecasting to healthcare diagnostics and urban intelligence.
+    </p>
+    <div class="hero-btns">
+      <a href="#" class="btn btn-primary">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download CV
+      </a>
+      <a href="https://scholar.google.com" target="_blank" class="btn btn-outline">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 10a8 8 0 017.162 3.44L24 9.5z"/></svg>
+        Google Scholar
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="btn btn-outline">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:subhiksh@example.com" class="btn btn-outline">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num">8</span>
+      <span class="stat-label">Conference Papers</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Book Chapters</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">14</span>
+      <span class="stat-label">Publications</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5+</span>
+      <span class="stat-label">Research Domains</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">Biography</div>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I am a M.Tech (CSE) Research Scholar at Madanapalle Institute of Technology & Science (MITS), Andhra Pradesh, India, working at the intersection of Artificial Intelligence, Explainable AI, and domain-specific intelligent systems. My research focuses on developing transparent, trustworthy, and practically deployable AI models across high-stakes domains including healthcare, finance, and urban systems.</p>
+        <p>With 8 accepted international conference papers and 6 accepted book chapters—all currently in press—my work spans explainable machine learning, financial risk forecasting, federated learning architectures, quantum-classical hybrid models, and low-resource natural language processing. Each contribution is oriented toward bridging the gap between algorithmic innovation and interpretable, real-world deployment.</p>
+        <p>My research philosophy is grounded in scientific rigor and applied relevance: I seek to build AI systems that are not only accurate, but auditable, equitable, and actionable. I am actively pursuing doctoral opportunities where I can deepen my contributions to AI safety, explainability, and intelligent decision-making under uncertainty.</p>
+        <p>Beyond independent research, I engage regularly in academic knowledge exchange through seminars, peer collaboration, and mentoring junior students on applied machine learning projects.</p>
+      </div>
+      <div class="about-sidebar">
+        <div class="info-card">
+          <h4>Affiliation</h4>
+          <div class="info-row">
+            <span class="info-icon">🎓</span>
+            <span>M.Tech (CSE), MITS, Andhra Pradesh</span>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">🔬</span>
+            <span>AI & Machine Learning Research</span>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">📍</span>
+            <span>Andhra Pradesh, India</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>Research Goals</h4>
+          <div class="info-row">
+            <span class="info-icon">🎯</span>
+            <span>PhD in Artificial Intelligence</span>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">📝</span>
+            <span>14 accepted publications</span>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">🌐</span>
+            <span>International research collaboration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH INTERESTS -->
+<section id="research">
+  <div class="section-inner">
+    <div class="section-label">Focus Areas</div>
+    <h2 class="section-title">Research Interests</h2>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <span class="interest-icon">🤖</span>
+        <h3>Artificial Intelligence & Machine Learning</h3>
+        <p>Deep learning, ensemble methods, and scalable ML architectures for real-world deployment.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-icon">🔍</span>
+        <h3>Explainable AI (XAI)</h3>
+        <p>SHAP, LIME, and post-hoc interpretability methods for transparent model decision-making.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-icon">📈</span>
+        <h3>Financial Risk Forecasting</h3>
+        <p>AI-driven predictive models for investment risk, credit scoring, and market intelligence.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-icon">☁️</span>
+        <h3>Cloud Robotics & Federated Learning</h3>
+        <p>Privacy-preserving distributed learning and cloud-integrated autonomous systems.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-icon">⚛️</span>
+        <h3>Quantum Machine Learning</h3>
+        <p>Quantum-classical hybrid algorithms and variational circuits for accelerated learning.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-icon">🏙️</span>
+        <h3>Urban Intelligence & Public Safety AI</h3>
+        <p>Smart city analytics, crowd behavior modeling, and AI-enabled safety infrastructures.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-icon">📚</span>
+        <h3>Low-Resource NLP</h3>
+        <p>Transfer learning and data-efficient techniques for under-resourced language processing.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-icon">🏥</span>
+        <h3>Healthcare AI</h3>
+        <p>Medical imaging analysis, diagnostic AI, and clinical decision support systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-inner">
+    <div class="section-label">Scholarly Output</div>
+    <h2 class="section-title">Publications</h2>
+
+    <!-- CONFERENCE PAPERS -->
+    <div class="pub-section">
+      <div class="pub-section-title">A. Conference Papers — Accepted, In Press</div>
+
+      <div class="pub-item">
+        <div class="pub-num">1.</div>
+        <div class="pub-content">
+          <div class="pub-title">Explainable AI Framework for Credit Risk Assessment in Digital Banking Systems</div>
+          <div class="pub-venue">International Conference on Artificial Intelligence and Data Science (ICAIDS)</div>
+          <div class="pub-meta">
+            <span class="badge badge-green">Accepted – In Press</span>
+            <span class="pub-year">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">2.</div>
+        <div class="pub-content">
+          <div class="pub-title">Federated Learning with Differential Privacy for Healthcare Data Integration</div>
+          <div class="pub-venue">IEEE International Conference on Cloud Computing and Intelligence Systems (CCIS)</div>
+          <div class="pub-meta">
+            <span class="badge badge-green">Accepted – In Press</span>
+            <span class="pub-year">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">3.</div>
+        <div class="pub-content">
+          <div class="pub-title">Quantum-Classical Hybrid Neural Networks for Financial Time-Series Forecasting</div>
+          <div class="pub-venue">International Conference on Quantum Computing and Machine Intelligence (QCMI)</div>
+          <div class="pub-meta">
+            <span class="badge badge-green">Accepted – In Press</span>
+            <span class="pub-year">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">4.</div>
+        <div class="pub-content">
+          <div class="pub-title">Deep Convolutional Networks for Automated Retinal Disease Detection in Low-Resource Settings</div>
+          <div class="pub-venue">International Conference on Biomedical Engineering and AI (ICBEAI)</div>
+          <div class="pub-meta">
+            <span class="badge badge-green">Accepted – In Press</span>
+            <span class="pub-year">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">5.</div>
+        <div class="pub-content">
+          <div class="pub-title">Interpretable Insurance Risk Scoring Using Gradient Boosting and SHAP Attribution</div>
+          <div class="pub-venue">International Conference on Financial Technology and Machine Learning (FinTechML)</div>
+          <div class="pub-meta">
+            <span class="badge badge-green">Accepted – In Press</span>
+            <span class="pub-year">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">6.</div>
+        <div class="pub-content">
+          <div class="pub-title">Urban Traffic Anomaly Detection Using Federated Graph Neural Networks</div>
+          <div class="pub-venue">IEEE Smart Cities and Urban Computing Conference (SmartCities)</div>
+          <div class="pub-meta">
+            <span class="badge badge-green">Accepted – In Press</span>
+            <span class="pub-year">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">7.</div>
+        <div class="pub-content">
+          <div class="pub-title">Low-Resource Telugu Text Classification via Multilingual Pre-trained Language Models</div>
+          <div class="pub-venue">International Conference on Natural Language Processing for South Asian Languages (NLPSAL)</div>
+          <div class="pub-meta">
+            <span class="badge badge-green">Accepted – In Press</span>
+            <span class="pub-year">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">8.</div>
+        <div class="pub-content">
+          <div class="pub-title">Cloud Robotics Architecture for Collaborative Autonomous Systems with Adaptive Learning</div>
+          <div class="pub-venue">International Conference on Robotics, Automation and Intelligent Systems (RAIS)</div>
+          <div class="pub-meta">
+            <span class="badge badge-green">Accepted – In Press</span>
+            <span class="pub-year">2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOK CHAPTERS -->
+    <div class="pub-section">
+      <div class="pub-section-title">B. Book Chapters — Accepted, In Press</div>
+
+      <div class="pub-item">
+        <div class="pub-num">1.</div>
+        <div class="pub-content">
+          <div class="pub-title">Explainable Machine Learning in Healthcare: Principles, Methods, and Deployment Considerations</div>
+          <div class="pub-venue"><em>Advances in AI for Medical Informatics</em>, Springer</div>
+          <div class="pub-meta">
+            <span class="badge badge-blue">Book Chapter – In Press</span>
+            <span class="pub-year">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">2.</div>
+        <div class="pub-content">
+          <div class="pub-title">Federated Learning for Privacy-Preserving Financial Analytics: Architecture and Case Studies</div>
+          <div class="pub-venue"><em>AI-Driven Financial Intelligence</em>, CRC Press</div>
+          <div class="pub-meta">
+            <span class="badge badge-blue">Book Chapter – In Press</span>
+            <span class="pub-year">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">3.</div>
+        <div class="pub-content">
+          <div class="pub-title">Quantum Machine Learning: Algorithms, Frameworks, and Emerging Applications</div>
+          <div class="pub-venue"><em>Quantum Computing for Engineers and Scientists</em>, Wiley</div>
+          <div class="pub-meta">
+            <span class="badge badge-blue">Book Chapter – In Press</span>
+            <span class="pub-year">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">4.</div>
+        <div class="pub-content">
+          <div class="pub-title">Interpretable AI for Insurance Risk Management: From Black-Box to Transparent Models</div>
+          <div class="pub-venue"><em>Responsible AI in Business and Finance</em>, Springer</div>
+          <div class="pub-meta">
+            <span class="badge badge-blue">Book Chapter – In Press</span>
+            <span class="pub-year">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">5.</div>
+        <div class="pub-content">
+          <div class="pub-title">Deep Learning for Medical Image Analysis: Challenges in Data-Scarce Clinical Environments</div>
+          <div class="pub-venue"><em>Computational Intelligence in Biomedical Engineering</em>, Elsevier</div>
+          <div class="pub-meta">
+            <span class="badge badge-blue">Book Chapter – In Press</span>
+            <span class="pub-year">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">6.</div>
+        <div class="pub-content">
+          <div class="pub-title">Urban AI and Smart Infrastructure: Integrating Machine Learning into City Management Systems</div>
+          <div class="pub-venue"><em>Smart Cities: AI, IoT, and Data-Driven Governance</em>, CRC Press</div>
+          <div class="pub-meta">
+            <span class="badge badge-blue">Book Chapter – In Press</span>
+            <span class="pub-year">2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-label">Applied Research</div>
+    <h2 class="section-title">Research Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-tag">Healthcare AI</div>
+        <h3>AI-Based Medical Imaging & Diagnosis</h3>
+        <ul>
+          <li>Deployed CNN architectures (ResNet, EfficientNet) for multi-class retinal and pulmonary disease classification</li>
+          <li>Integrated Grad-CAM and SHAP-based saliency maps for clinical interpretability</li>
+          <li>Achieved robust performance on small annotated datasets via transfer learning and augmentation pipelines</li>
+          <li>Designed for deployment in low-resource diagnostic settings with minimal computational overhead</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Financial Intelligence</div>
+        <h3>AI-Driven Investment Risk Prediction Framework</h3>
+        <ul>
+          <li>Built ensemble models (XGBoost, LightGBM, Random Forest) for multi-horizon investment risk forecasting</li>
+          <li>Incorporated macroeconomic indicators, sentiment analysis, and technical signals as feature inputs</li>
+          <li>Applied SHAP attribution for per-prediction interpretability aligned with regulatory transparency requirements</li>
+          <li>Evaluated against classical risk metrics including VaR, CVaR, and drawdown-adjusted return ratios</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Insurance Analytics</div>
+        <h3>Smart Risk Scoring for Insurance Analytics</h3>
+        <ul>
+          <li>Designed an end-to-end ML pipeline for automated policyholder risk stratification and premium calibration</li>
+          <li>Applied gradient boosting and logistic regression with calibrated probability outputs</li>
+          <li>Integrated LIME and SHAP for per-applicant risk factor explanations suitable for auditors and underwriters</li>
+          <li>Benchmarked against actuarial baseline models demonstrating improved accuracy and interpretability</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="section-inner">
+    <div class="section-label">Academic Journey</div>
+    <h2 class="section-title">Research Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2022</div>
+        <div class="timeline-title">Commenced M.Tech (CSE) at MITS</div>
+        <div class="timeline-desc">Enrolled as a research scholar with a focus on applied machine learning and AI systems. Initiated early-stage research in explainability and financial AI.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2023</div>
+        <div class="timeline-title">First Conference Submissions & Research Projects</div>
+        <div class="timeline-desc">Submitted initial conference papers on XAI and healthcare AI. Began applied projects in medical imaging and insurance risk analytics.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2024</div>
+        <div class="timeline-title">6 Conference Papers Accepted</div>
+        <div class="timeline-desc">Six international conference papers accepted across domains including federated learning, financial forecasting, quantum ML, urban AI, and NLP. Expanded into book chapter contributions.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2025</div>
+        <div class="timeline-title">2 Additional Conference Papers + 6 Book Chapters Accepted</div>
+        <div class="timeline-desc">Two more conference papers and six book chapters accepted across major publishers. Actively pursuing doctoral applications and international research collaborations.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Next</div>
+        <div class="timeline-title">PhD Research — Seeking Opportunities</div>
+        <div class="timeline-desc">Targeting doctoral programs in AI/ML with a focus on explainability, trustworthy AI, and cross-domain intelligent systems.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label">Technical Competencies</div>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Programming</h3>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">R</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">MATLAB</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">Bash / Shell</span>
+      </div>
+      <div class="skill-category">
+        <h3>AI / ML</h3>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">Scikit-learn</span>
+        <span class="skill-tag">XGBoost</span>
+        <span class="skill-tag">LightGBM</span>
+        <span class="skill-tag">Hugging Face</span>
+        <span class="skill-tag">SHAP</span>
+        <span class="skill-tag">LIME</span>
+        <span class="skill-tag">PennyLane</span>
+        <span class="skill-tag">Qiskit</span>
+        <span class="skill-tag">Flower (FL)</span>
+      </div>
+      <div class="skill-category">
+        <h3>Data Analytics</h3>
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">NumPy</span>
+        <span class="skill-tag">Matplotlib</span>
+        <span class="skill-tag">Seaborn</span>
+        <span class="skill-tag">Plotly</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Excel</span>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <span class="skill-tag">Google Colab</span>
+        <span class="skill-tag">Jupyter</span>
+        <span class="skill-tag">AWS (basics)</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Git / GitHub</span>
+        <span class="skill-tag">LaTeX</span>
+        <span class="skill-tag">VS Code</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <div class="section-label">Professional Development</div>
+    <h2 class="section-title">Certifications</h2>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Machine Learning Specialization</h4>
+          <p>Coursera / Stanford Online</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Deep Learning Specialization</h4>
+          <p>Coursera / deeplearning.ai</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>TensorFlow Developer Certificate</h4>
+          <p>Google / TensorFlow</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Natural Language Processing with Python</h4>
+          <p>NPTEL / IIT</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Quantum Computing Fundamentals</h4>
+          <p>IBM Quantum / Qiskit</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Data Science & Analytics</h4>
+          <p>NPTEL / IIT Madras</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Cloud Computing with AWS</h4>
+          <p>Amazon Web Services</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Explainable AI (XAI) Workshop</h4>
+          <p>Springer / Academic Short Course</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching">
+  <div class="section-inner">
+    <div class="section-label">Academic Engagement</div>
+    <h2 class="section-title">Teaching & Scholarly Service</h2>
+    <div class="teaching-grid">
+      <div class="teaching-card">
+        <h3>🎤 Seminars & Talks</h3>
+        <p>Delivered invited seminars on Explainable AI and Federated Learning at departmental colloquia and student research symposia. Topics have included practical XAI for industrial deployment and privacy-preserving machine learning paradigms.</p>
+      </div>
+      <div class="teaching-card">
+        <h3>🧑‍🏫 Research Mentoring</h3>
+        <p>Mentored undergraduate and junior postgraduate students on applied ML projects spanning data preprocessing, model development, and research writing. Guided several students in preparing their first academic manuscripts.</p>
+      </div>
+      <div class="teaching-card">
+        <h3>🤝 Academic Collaboration</h3>
+        <p>Actively engaged in inter-institutional research discussions and collaborative paper writing. Participates in review circles and peer knowledge-sharing forums within the MITS AI research community.</p>
+      </div>
+      <div class="teaching-card">
+        <h3>📖 Workshop Participation</h3>
+        <p>Attended and contributed to multiple national and international workshops on deep learning, NLP, and quantum computing. Maintained active engagement with the broader AI research community through conferences and proceedings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-label">Get in Touch</div>
+  <h2 class="section-title">Contact</h2>
+  <p class="contact-p">Open to research collaborations, PhD inquiries, and academic correspondence.</p>
+  <div class="contact-links">
+    <a href="mailto:subhiksh@example.com" class="contact-link">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      subhiksh@example.com
+    </a>
+    <a href="https://linkedin.com/in/angajala-sai-subhiksh" target="_blank" class="contact-link">
+      <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://scholar.google.com" target="_blank" class="contact-link">
+      <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 10a8 8 0 017.162 3.44L24 9.5z"/></svg>
+      Google Scholar
+    </a>
+    <span class="contact-link" style="cursor:default;">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Andhra Pradesh, India
+    </span>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Angajala Sai Subhiksh · M.Tech Research Scholar, MITS · All rights reserved
+</footer>
+
+</body>
+</html>
